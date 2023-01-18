@@ -1,0 +1,15 @@
+.titre {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.titre_paragraphe {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.paragraphe {
+    font-size: 13px;
+}

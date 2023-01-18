@@ -1,0 +1,86 @@
+.objectif {
+    margin-top: 16px;
+    background-color:#BFDCE5;
+    min-height: 100px;
+    width : 100%;
+    border-radius: 12px;
+    padding: 12px 0;
+}
+.objectif .header {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-color);
+    padding: 0 16px;
+}
+.objectif .listeObjectif {
+    font-size: 14px;
+    margin-top: 12px;
+    padding: 0 16px;
+}
+.objectif .listeObjectif .all{
+   display: flex;
+   align-items: center;
+   height: 36px;
+   justify-content: space-between;
+   padding: 3px 12px;
+   
+   margin-top: 12px;
+   border-radius: 12px;
+   transition: all .3s ease-in-out;
+}
+.objectif .listeObjectif .all:hover{
+    background-color: rgba(0, 0, 0, 0.079);
+}
+
+
+.objectif .listeObjectif .all span{
+   display: flex;
+   height: 100%;
+   align-items: center;
+}
+
+.objectifs {
+    display: flex;
+}
+.objectifs + .objectifs {
+    margin-top: 12px;
+}
+
+.objectifs .icons {
+    display: flex;
+     height: 24px;
+     width: 30px;
+     align-items: center;
+     justify-content: flex-start;
+}
+.objectifs .topic {
+    flex: 1;
+    padding-top: 4px;
+    
+}
+
+.objectifs .icons div {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.progression {
+    width: 100%;
+    margin-top: 16px;
+    padding: 0 16px;
+}
+.progression .progressionBar {
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #CDF1FC;
+
+}
+.progression .progressionBar .progressionState {
+    width: 60%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+
+}

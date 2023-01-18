@@ -1,0 +1,8 @@
+.touchable  {
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+.touchable:hover {
+    background-color: #e2e2e2;
+}
+

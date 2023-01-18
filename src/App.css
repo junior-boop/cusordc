@@ -1,0 +1,33 @@
+.vide {
+    display: block;
+    height: 100px;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+section + section {
+    margin-top: 48px;
+}
+
+::-webkit-scrollbar {
+    background-color: white;
+    border: none;
+    width: 14px;
+}
+
+::-webkit-scrollbar-track {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    width: 12px;
+    border-radius: 12px;
+}

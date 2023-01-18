@@ -1,0 +1,30 @@
+.profils_cadre {
+    display: block;
+    width: 120px;
+    height: 170px;
+    border-radius: 12px;
+    background-color: var(--primary-gris);
+}
+
+.profils_cadre .avatar_profils {
+    display : flex ;
+    align-items: center;
+    justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 12px;
+    width: 100%;
+    aspect-ratio: 4/3;
+}
+
+.profils_cadre .avatar {
+    width: 74px;
+}
+.profils_cadre .profils_name {
+    width: 70%;
+    margin: auto;
+}
+.profils_cadre .profils_name .name {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}

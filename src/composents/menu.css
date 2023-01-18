@@ -1,0 +1,59 @@
+.menu {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 24px 0 ;
+    background-color: var(--primary-gris);
+    border-radius: 12px;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.menuItem:hover {
+    background-color: #dedede;
+}
+.menuItem span {
+    height: 85%;
+    width: 5px;
+    border-radius: 0 7px 7px 0;
+    background-color: #53B4FE;
+}
+
+.menuItem .icons {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menuItem .icons .indice {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff0055;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.5px;
+}
+.menuItem .titre {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 12px;
+    color: #555;
+    flex: 1;
+}
+
+span.inactive {
+    background-color: transparent;
+}

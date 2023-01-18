@@ -1,0 +1,6 @@
+.navbar {
+    position: sticky;
+    top: 12px;
+    height: calc(100vh - 12px);
+    padding-left: 16px;
+}

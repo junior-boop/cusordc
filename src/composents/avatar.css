@@ -1,0 +1,39 @@
+.avatar_profils {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width : 60px;
+    aspect-ratio: 1/1;
+}
+.avatar_profils > .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width : 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: silver;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.avatar_publication {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width : 40px;
+    aspect-ratio: 1/1;
+}
+.avatar_publication > .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width : 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: silver;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

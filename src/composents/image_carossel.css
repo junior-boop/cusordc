@@ -1,0 +1,17 @@
+.image_element{
+    display: block;
+    border-radius: 12px;
+    width: 300px;
+    aspect-ratio: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.image_element[data-number = 'single'] {
+   width: 100%;
+   aspect-ratio: 1/1;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin-top: 16px;
+}

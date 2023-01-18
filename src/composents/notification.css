@@ -1,0 +1,28 @@
+.notification_mainthread {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 12px;
+    position: relative;
+    background-color: var(--primary-color);
+}
+
+.notification_mainthread > div {
+    padding: 18px 0;
+    width: 90%;
+}
+.notification_mainthread > .close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+
+}
+
+.notification_mainthread > div * {
+    text-align: center;
+    color: white;
+}
