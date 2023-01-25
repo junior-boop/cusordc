@@ -1,21 +1,17 @@
 import React from 'react';
-import './bouton.css'
+import './profil.css'
+import { Avatar_profils } from './avatar';
 
 
-export default function Touchable2(){
+export default function Profils(){
     return(
         
-        <div className='infos'>
-            <div className="prof">
-                <div>
-                    <img className="profil" src="./christphoto.jpg" alt="logo" />
-                </div>
-             <div className='nom'>
-                    <span>Atsihimay Christine</span><br />
-                    <span>#1235489</span>
-             </div>
-                  
-            </div>  
+        <div className='profils'>
+            <div className='user_name'>
+                <div className='Nom'>Christine Atsihimay</div>
+                <div className='id'>#1235489</div>
+            </div>
+            <Avatar_profils image={'christphoto.jpg'} /> 
             
         </div>
         

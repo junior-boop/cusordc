@@ -8,7 +8,9 @@ import Objectif from "./progression";
 export default function Navigation(){
     return(
         <div className="navbar">
-            <Logo />
+            <div className="logo_space">
+                <Logo />
+            </div>
             <Menu />
             <Objectif />
         </div>

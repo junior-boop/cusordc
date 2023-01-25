@@ -1,6 +1,5 @@
 import React from 'react';
 import './mainthread.css'
-import Vide from '../composents/vide';
 import Container from '../composents/container';
 import { Notification_MainThread } from '../composents/notification';
 import { Publication } from './publication';
@@ -13,7 +12,6 @@ import Search_Bar from '../composents/search_bar';
 export default function MainThread(){
     return(
         <div className="mainthread">
-            {/* <Vide /> */}
             <section>
             <Search_Bar />
             </section>

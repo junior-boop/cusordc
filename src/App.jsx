@@ -1,8 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import Beneficiaire from './composents/Beneficiaire'
-import Nav from './composents/logo'
-import Anonce from './composents/Anonce'
 import Screen from './Layouts/screen'
 import Navbar from './Layouts/navbar'
 import MainThread from './Layouts/maintread'
@@ -17,35 +14,6 @@ export default function App() {
         <MainThread />
         <LastSpace />
       </Screen>
-      
-      {/* <div>
-        <Nav />
-      </div>
-
-      <div className='grd_div'>
-        
-      <div className='cote_gauche'>  
-        <Navbar/>
-      </div>
-
-      <div>
-      <div className='infos'>
-        <Beneficiaire/>
-        <Beneficiaire/>
-        <Beneficiaire/>
-        <Beneficiaire/>
-      </div>
-      <div>
-        <Anonce/>
-      </div>
-      </div>
-      
-
-      <div className='cote_droit'>
-        dghgdg
-      </div>
-      </div>
-       */}
     </div>
   )
 }

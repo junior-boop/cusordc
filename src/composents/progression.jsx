@@ -14,9 +14,7 @@ export default function Objectif(){
                     <Element check topic={'Mettre à jour votre profils '} />
                     <Element topic={'Être à jour sur les cours vidéos'} />
                 </div>
-                {/* <div className='all'>Afficher toute la liste <span>
-                <IonArrowForwardOutline />
-                    </span></div> */}
+                 
             </div>
             <div className="progression">
                 <div className="progressionBar">

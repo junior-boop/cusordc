@@ -31,3 +31,7 @@ section + section {
     width: 12px;
     border-radius: 12px;
 }
+
+a {
+    text-decoration: none;
+}

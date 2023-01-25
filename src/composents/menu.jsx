@@ -19,7 +19,7 @@ export default function Menu(){
                         color : '#555'
                 }} />
             </MenuItem>
-            <MenuItem titre = {'Cours'} hash = {'/cours'} notice>
+            <MenuItem titre = {'Formation'} hash = {'/cours'} notice>
                 <IonMdBookmarks style = {{
                         height : 24,
                         width : 24,
@@ -54,7 +54,7 @@ function MenuItem({children, titre, hash, notice, newNotice}){
     const validation = pathCheck ? '' : 'inactive'
 
     return(
-        <div className="menuItem">
+        <a href={hash} className="menuItem">
             <span className={`${validation}`}></span>
             <div className="icons">
                 {children}
@@ -68,6 +68,6 @@ function MenuItem({children, titre, hash, notice, newNotice}){
                 <div className="indice">+9</div>
             </div>) : null
             }
-        </div>
+        </a>
     )
 }

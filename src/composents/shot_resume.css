@@ -1,0 +1,51 @@
+.shot_resume {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    background-color: #BFDCE5;
+    border-radius: 12px;
+    font-size: 14px;
+    overflow: hidden;
+}
+.shot_resume .header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #a3c3cd;
+    color : var(--primary-color);
+    padding: 0 16px;
+    font-weight: 700;
+}
+.shot_resume .info, .shot_resume .plus {
+    padding: 16px;
+}
+.shot_resume .info > .champ {
+    display: flex;
+}
+.shot_resume .info > .champ + .champ {
+    margin-top: 10px;
+}
+
+.shot_resume .info .index {
+    width: 100px;
+}
+.shot_resume .info .Valeur {
+    font-weight: 700;
+}
+
+.shot_resume .plus {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    gap: 12px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.shot_resume .plus:hover {
+    background-color: #8eb4c0;
+}
+.shot_resume .plus span {
+    display: inline-flex;
+    height: 100%;
+}
