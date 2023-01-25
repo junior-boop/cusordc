@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './menu.css'
-import {IonBriefcaseSharp, IonHomeSharp, IonMdBookmarks, IonMdChatbubbles} from './Icons'
+import {CarbonEnterprise, IonBriefcaseSharp, IonHomeSharp, IonMdBookmarks, IonMdChatbubbles, MingcuteBuilding1Fill} from './Icons'
 
 export default function Menu(){
     return(
@@ -10,6 +10,13 @@ export default function Menu(){
                     height : 20,
                     width : 20,
                     color : '#555'
+                }} />
+            </MenuItem>
+            <MenuItem titre={'Catalogue'} hash = {'/catalogue'}>
+                <MingcuteBuilding1Fill style = {{
+                        height : 24,
+                        width : 24,
+                        color : '#555'
                 }} />
             </MenuItem>
             <MenuItem titre={'Carrière'} hash = {'/carriere'}>
