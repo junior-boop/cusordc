@@ -18,13 +18,15 @@ section + section {
 }
 
 ::-webkit-scrollbar {
-    background-color: white;
+    background-color: #f9f9f9;
     border: none;
     width: 14px;
+    
 }
 
 ::-webkit-scrollbar-track {
     width: 12px;
+    position: fixed;
 }
 ::-webkit-scrollbar-thumb {
     background-color: var(--primary-color);
@@ -34,4 +36,8 @@ section + section {
 
 a {
     text-decoration: none;
+}
+
+.App {
+    position: relative;
 }

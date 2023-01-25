@@ -12,14 +12,11 @@ import Search_Bar from '../composents/search_bar';
 export default function MainThread(){
     return(
         <div className="mainthread">
-            <section>
-            <Search_Bar />
-            </section>
+            
             <section>
                 <Liste_etudiant />
             </section>
             <section>
-                
                 <Container><Titre_Paragraph> Quelques annonces</Titre_Paragraph></Container>
                 <Notification_MainThread />
                 <Publication type={'service'} />

@@ -15,7 +15,7 @@
     cursor: pointer;
 }
 .menuItem:hover {
-    background-color: #dedede;
+    background-color: #ddd;
 }
 .menuItem span {
     height: 85%;
