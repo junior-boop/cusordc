@@ -1,0 +1,76 @@
+.header_profils {
+    height: 150px;
+    width: 100%;
+    border-radius: 16px ;
+    background-color: #BFDCE5;
+    margin-top: 16px;
+    margin-bottom: 72px;
+    padding-top: 36px;
+    padding-left: 36px;
+    padding-right: 36px;
+}
+.header_profils > div  {
+    display: flex;
+    align-items: flex-start;
+    gap : 16px;
+}
+.header_profils .infos_user {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color : var(--primary-color)
+}
+.header_profils .infos_user > .name {
+    font-size: 28px;
+    font-weight: 700;
+}
+.header_profils .infos_user > .surname {
+    font-size: 28px;
+}
+
+.form.basic .liste {
+    padding-bottom: 24px ;
+}
+
+.champ {
+    width: 100%;
+    padding: 0 24px;
+}
+.champ + .champ {
+    margin-top: 12px;
+}
+
+.champ .titre_champ {
+    font-size: 13px;
+    color: rgb(119, 118, 118);
+}
+.champ .Valeur_champ {
+    font-size: 16px;
+    font-weight: 600;
+}
+.champ .titre_champ_pro {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    /* width: 50%; */
+}
+.champ .Valeur_champ_pro {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(119, 118, 118);
+    width : 80%;
+}
+
+.pro {
+    padding-top: 16px;
+}
+
+.pro + .pro {
+    border-top: 1px solid silver;
+    padding-top: 12px ;
+}
+

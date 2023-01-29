@@ -1,6 +1,13 @@
 import React from 'react';
 import './avatar.css'
 
+export function Avatar({image}){
+    return(
+        <div className="Avatar">
+            <div className='avatar' style={{backgroundImage : `url(${image})`}} />
+        </div>
+    )
+}
 export function Avatar_profils({image}){
     return(
         <div className="avatar_profils">

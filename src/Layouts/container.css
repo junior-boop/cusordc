@@ -1,0 +1,7 @@
+.normale_container {
+    width: 100%;
+    max-width: 1400px;
+    min-height: calc(100vh - 68px);
+    margin: 0 auto;
+    border: 1px solid transparent;
+}

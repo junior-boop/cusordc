@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Accueil from "../route/accueil";
 import Messagerie from "../route/messagerie";
+import Profils_Route from "../route/profils";
+import Header from "../src/Layouts/Header";
 
 export default function Index(){
     const [navigation, setNavigation] = useState('')
@@ -11,7 +13,7 @@ export default function Index(){
 
             switch (pathname) {
                 case '/':
-                    setNavigation(<Accueil />)
+                    setNavigation(<Profils_Route />)
                     break;
                 case '/cours':
                     setNavigation(<Accueil />)
@@ -26,5 +28,10 @@ export default function Index(){
         }
     }, [])
 
-    return <>{navigation}</>
+    return (
+    <>
+    <Header />
+    {navigation}
+    </>
+    )
 }

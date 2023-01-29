@@ -1,0 +1,11 @@
+.form {
+    width: 100%;
+    border-radius: 12px;
+    min-height: 15px;
+}
+.form + .form {
+    margin-top: 36px;
+}
+.form.basic {
+    background-color : var(--primary-gris);
+}

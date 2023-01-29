@@ -43,3 +43,11 @@ export default function Header (){
         </section>
     )
 }
+
+export function Composants_Header({ children }){
+    return(
+        <div className="composant_header">
+            { children }
+        </div>
+    )
+}
