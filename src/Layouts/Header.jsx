@@ -5,9 +5,14 @@ import Profils from '../composents/profil';
 import Touchable from '../composents/touchable';
 import { IonSettingsSharp } from '../composents/Icons';
 
+import { useLocation } from 'react-router-dom';
+
 import './header.css'
 
 export default function Header (){
+
+    const {pathname} = useLocation()
+
     return(
         <section className='headerApp'>
             <div className="containerFull">
@@ -15,7 +20,11 @@ export default function Header (){
                 <Logo />
             </div>
             <div className='search_bar_space'>
-                <Search_Bar />
+                {
+                    pathname === '/' 
+                    ? <Search_Bar />
+                    : null
+                }
             </div>
             <div className="profils_user_space">
                 <Profils />

@@ -14,13 +14,25 @@
     align-items: flex-start;
     gap : 16px;
 }
+.header_profils > div .modifier  {
+    padding: 9px 36px;
+    background-color: var(--primary-color);
+    border-radius: 50px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.header_profils > div .modifier:hover {
+    background-color: #02475c;
+}
 .header_profils .infos_user {
     height: 100px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color : var(--primary-color)
+    color : #02475c;
 }
 .header_profils .infos_user > .name {
     font-size: 28px;
@@ -33,10 +45,54 @@
 .form.basic .liste {
     padding-bottom: 24px ;
 }
+.form.basic .liste.grid_list {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
 
 .champ {
     width: 100%;
     padding: 0 24px;
+}
+
+.form.basic .liste.grid_list .champ {
+    margin-top: 0;
+}
+
+.form.basic + .form.basic {
+    margin-top: 7px;
+}
+.form.basic .new-champ {
+    padding-right: 5px;
+    height: 48px;
+    background-color: var(--primary-gris);
+    border-radius: 50px;
+    width: fit-content;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form.basic .new-champ div:first-child {
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.form.basic .new-champ .icon {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 80%;
+   aspect-ratio: 1/1;
+   border-radius: 50%;
+   background-color: var(--primary-color);
 }
 .champ + .champ {
     margin-top: 12px;
@@ -46,10 +102,46 @@
     font-size: 13px;
     color: rgb(119, 118, 118);
 }
+.champ .tel_champ {
+    font-size: 13px;
+    color: rgb(119, 118, 118);
+    display: flex;
+    align-items: center;
+    gap : 5px
+}
 .champ .Valeur_champ {
     font-size: 16px;
     font-weight: 600;
 }
+.champ .value_champ_input {
+    padding: 7px 0;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    outline: 1px solid transparent;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid silver;
+    width: 100%;
+    
+}
+
+.champ textarea.value_champ_input {
+    padding: 7px 0;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    outline: 1px solid transparent;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid silver;
+    width: 100%;
+    resize: none;
+    transition: all .3s ease-in-out;
+}
+
+.champ textarea.value_champ_input::-webkit-scrollbar {
+    display: none;
+}
+
 .champ .titre_champ_pro {
     font-size: 16px;
     font-weight: 600;

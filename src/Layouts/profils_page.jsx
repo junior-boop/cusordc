@@ -6,7 +6,8 @@ import './profils_page.css'
 import Basic_Form from '../composents/form';
 import { Composants_Header } from './Header';
 import Footer from '../composents/footer';
-import Touchable from '../composents/touchable';
+
+import { Link } from 'react-router-dom';
 
 export default function Profils_Page(){
     return(
@@ -89,15 +90,12 @@ export function Header_Profils(){
                     </div>
                     <div style={{
                         height: 100,
-                        border : '1px solid silver',
                         display : 'flex',
                         alignItems : 'flex-end'
                     }}>
-                        <Touchable style={{
-                            padding : '7px 16px'
-                        }}>
+                        <Link to={'/user_modification'} className='modifier'>
                             Modifier
-                        </Touchable>
+                        </Link>
                     </div>
                 </div>
             </div>
