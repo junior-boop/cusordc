@@ -17,6 +17,11 @@ export default function Profils_Modification_Page(){
     const [tel, setTel] = useState('655776655')
     const [date, setDate] = useState('1998-01-27')
 
+    const [nom, setName] = useState('ATSIHIMEY')
+    const [prenom, setSubname] = useState('Christine')
+    const [ville, setVille] = useState('Yaounde')
+    const [mail, setMail] = useState('christineatsihimay74@gmail.com')
+
     useEffect(() => {
         let formating = new FormatageTel()
 
@@ -41,12 +46,12 @@ export default function Profils_Modification_Page(){
                         <span>Résumé</span>
                     </Composants_Header>
                     <div className='liste grid_list'>
-                        <Champ titre={'Nom'} value = {'ATSIHIMEY'} />
-                        <Champ titre={'Prénom'} value = {'Christine'} />
+                        <Champ titre={'Nom'} value = {nom} onChange={({target}) => setName(target.value)} />
+                        <Champ titre={'Prénom'} value = {prenom} onChange = {({target}) => setSubname(target.value)} />
                         <Champ titre={'Date de naissance'} value = {date} type='date' onChange={({target}) => setDate(target.value)} />
-                        <Champ titre={'Ville de residence'} value = {'Yaounde'} />
+                        <Champ titre={'Ville de residence'} value = {ville} onChange={() => setVille} />
                         <Champ titre={'Numero de telephone'} value = {tel} onChange={({target}) => setTel(target.value)} type='tel'/>
-                        <Champ titre={'Adresse E-mail'} value = {'christineatsihimay74@gmail.com'} type='email'/>
+                        <Champ titre={'Adresse E-mail'} value = {mail} onChange={({target}) => setMail(target.value)} type='email'/>
                     </div>
                 </Basic_Form>
                 <Composants_Header>
@@ -69,19 +74,7 @@ export default function Profils_Modification_Page(){
 
 
 function Champ({titre, type = 'text', value, onChange}){
-    const [textareaheight, setTextareaheight] = useState(0)
-    const textarea = useRef()
-
-    useEffect(() => {
-        if(typeof window !== 'undefined'){
-            if(textarea.current !== undefined) {
-                setTextareaheight(textarea.current.offsetHeight)
-                console.log(textarea.current.offsetHeight)
-            }
-        }
-    }, [textarea, textareaheight])
-
-    
+    const textarea = useRef()    
 
     return(
         <div className="champ">
