@@ -4,34 +4,15 @@ import Messagerie from "../route/messagerie";
 import Profils_Route from "../route/profils";
 import Header from "../src/Layouts/Header";
 
+
+import {useLocation} from 'react-router-dom'
+import AppRoute from "../route/Routes/Routes";
+
 export default function Index(){
-    const [navigation, setNavigation] = useState('')
-    useEffect(() => {
-        if(typeof window !== 'undefined'){
-            const pathname = window.location.pathname
-            console.log(pathname)
-
-            switch (pathname) {
-                case '/':
-                    setNavigation(<Profils_Route />)
-                    break;
-                case '/cours':
-                    setNavigation(<Accueil />)
-                    break;
-                case '/messagerie':
-                    setNavigation(<Messagerie />)
-                    break;
-                default:
-                    setNavigation(<Accueil />)
-                    break;
-            }
-        }
-    }, [])
-
     return (
     <>
-    <Header />
-    {navigation}
+        <Header />
+        <AppRoute />
     </>
     )
 }
