@@ -5,7 +5,7 @@ import Footer from '../composents/footer'
 
 import './profils_page.css'
 import Basic_Form from '../composents/form'
-import { Avatar } from '../composents/avatar'
+import { Avatar, AvatarModifier } from '../composents/avatar'
 
 import FormatageTel from '../constante/formatage'
 import { ReformatingDate } from '../constante/date'
@@ -83,7 +83,7 @@ function Champ({titre, type = 'text', value, onChange}){
                 type === 'tel' 
                 ? (
                     <div className='tel_champ'>
-                        <div>+237</div>
+                        <div>+243</div>
                         <input type= {type}  className='value_champ_input' value={value} onChange={onChange} />
                     </div>
                 )
@@ -147,7 +147,7 @@ export function Header_Profils(){
     return(
         <div className="header_profils">
                 <div>
-                    <Avatar image={'christphoto.jpg'}/>
+                    <AvatarModifier image={'christphoto.jpg'}/>
                     <div className="infos_user">
                         <div className="name">
                             ATSIHIMEY

@@ -5,6 +5,37 @@
     width : 150px;
     aspect-ratio: 1/1;
 }
+.Avatar.modif {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width : 150px;
+    aspect-ratio: 1/1;
+    position : relative;
+    z-index: 2;
+}
+
+.Avatar.modif .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 48px;
+    aspect-ratio: 1;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    border: 3px solid white;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.Avatar.modif .icon:hover {
+    background-color: #02475C;
+}
+
+
 
 .Avatar > .avatar {
     display: flex;
