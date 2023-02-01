@@ -1,0 +1,106 @@
+.input_image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.293);
+    z-index: 101;
+}
+
+.input_image.novisible {
+    display: none ;
+}
+
+.input_image .content {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1400px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.input_image .content > .input_image_card{
+    position: relative;
+    z-index: 1004;
+    margin-top: 36px;
+    height: 256px;
+    width: 70%;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 10px -4px rgba(102, 102, 102, 0.468);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap : 24px;
+}
+.input_image .content > .background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1003;
+}
+.input_image .content > .input_image_card .affiche{
+   height: 100%;
+   aspect-ratio: 1/1;
+   border: 1px solid silver;
+   border-radius: 12px ;
+}
+.input_image .content > .input_image_card .controle{
+   width: 400px;
+   height: 100%;
+}
+.input_image .content > .input_image_card .close{
+   width: 36px;
+   height: 36px;
+   background-color: #ff0055;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   position: absolute;
+   top: 24px;
+   right: 24px;
+   cursor: pointer;
+   transition: all .3s ease-in-out;
+}
+.input_image .content > .input_image_card .close:hover{
+   background-color: #dc034b;
+}
+
+.input_image_card .controle > .input_name {
+    margin: 12px 0;
+
+}
+
+.input_image_card .controle > .input_controler input {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    visibility: hidden;
+}
+
+.input_image_card .controle > .input_controler input::before {
+    content: 'Telecharger';
+    padding: 10px 28px;
+    width: 200px;
+    background-color: var(--primary-color);
+    border-radius: 12px;
+    position: absolute;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.input_image_card .controle > .input_controler input:hover::before {
+    background-color: #02475C;
+}

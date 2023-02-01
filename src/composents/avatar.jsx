@@ -9,11 +9,11 @@ export function Avatar({image}){
         </div>
     )
 }
-export function AvatarModifier({image}){
+export function AvatarModifier({image, onClick}){
     return(
         <div className="Avatar modif">
             <div className='avatar' style={{backgroundImage : `url(${image})`}} />
-            <div className="icon">
+            <div onClick={onClick} className="icon">
                 <IonEdit style = {{
                     width : 20,
                     height : 20,

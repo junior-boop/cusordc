@@ -1,4 +1,4 @@
-import React, { useState , useEffect, useRef} from 'react'
+import React, { useState , useEffect, useRef, useReducer} from 'react'
 import Composants from '../composents/composants'
 import { Composants_Header } from './Header'
 import Footer from '../composents/footer'
@@ -10,6 +10,9 @@ import { Avatar, AvatarModifier } from '../composents/avatar'
 import FormatageTel from '../constante/formatage'
 import { ReformatingDate } from '../constante/date'
 import { IonAddOutline } from '../composents/Icons'
+import Input_image from '../composents/input_images'
+import Screen, { Normale_Screen } from './screen'
+import { modification } from '../reducers/profils_modification_reducer'
 
 
 export default function Profils_Modification_Page(){
@@ -21,6 +24,9 @@ export default function Profils_Modification_Page(){
     const [prenom, setSubname] = useState('Christine')
     const [ville, setVille] = useState('Yaounde')
     const [mail, setMail] = useState('christineatsihimay74@gmail.com')
+    const [visibility, setVisibility] = useState(true)
+
+    const [etat, dispatch] = useReducer(modification, false)
 
     useEffect(() => {
         let formating = new FormatageTel()
@@ -38,8 +44,14 @@ export default function Profils_Modification_Page(){
     }, [date])
 
     return(
-        <div className="normal_container">
-            <Header_Profils />
+        <Normale_Screen >
+            <div style={{
+                maxWidth : 1400,
+                width : '100%',
+                margin : '0 auto'
+            }}>
+                <div className="normal_container">
+            <Header_Profils onClick={() => setVisibility(!visibility)} />
             <Composants>
                 <Basic_Form>
                     <Composants_Header>
@@ -68,7 +80,10 @@ export default function Profils_Modification_Page(){
                     <NewChamp value={'Ajouter une Experience'} />
             </Composants>
             <Footer />
+            <Input_image onClick={() => setVisibility(!visibility)} visible={visibility} />
         </div>
+            </div>
+        </Normale_Screen>
     )
 }
 
@@ -126,7 +141,7 @@ function Champ_pro({titre, year, value, onChange}){
 
 function NewChamp({value}){
     return(
-        <Basic_Form style={{ backgroundColor : 'white' }}>
+        <Basic_Form style={{ backgroundColor : 'transparent' }}>
             <div className='new-champ'>
                 <div>
                 { value }
@@ -143,11 +158,11 @@ function NewChamp({value}){
     )
 }
 
-export function Header_Profils(){
+export function Header_Profils({onClick}){
     return(
         <div className="header_profils">
                 <div>
-                    <AvatarModifier image={'christphoto.jpg'}/>
+                    <AvatarModifier onClick={onClick} image={'christphoto.jpg'}/>
                     <div className="infos_user">
                         <div className="name">
                             ATSIHIMEY
