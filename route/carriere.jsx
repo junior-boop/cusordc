@@ -7,6 +7,9 @@ export default function Carriere(){
         <div>
             <Screen>
                 <Navigation />
+                <div className="item-2-place">
+
+                </div>
             </Screen>
         </div>
     )

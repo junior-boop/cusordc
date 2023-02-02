@@ -8,10 +8,17 @@ import { Composants_Header } from './Header';
 import Footer from '../composents/footer';
 
 import { Link } from 'react-router-dom';
+import { Normale_Screen } from './screen';
 
 export default function Profils_Page(){
     return(
-        <div className="normal_container">
+        <Normale_Screen>
+            <div style={{
+                maxWidth : 1400,
+                width : '100%',
+                margin : '0 auto'
+            }}>
+                <div className="normal_container">
             <Header_Profils />
             <Composants>
                 <Basic_Form>
@@ -48,7 +55,9 @@ export default function Profils_Page(){
                 </Basic_Form>
             </Composants>
             <Footer />
-        </div>
+            </div>
+            </div>
+        </Normale_Screen>
     )
 }
 

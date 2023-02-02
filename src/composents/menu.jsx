@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './menu.css'
 import {CarbonEnterprise, IonBriefcaseSharp, IonHomeSharp, IonMdBookmarks, IonMdChatbubbles, MingcuteBuilding1Fill} from './Icons'
+import { Link } from 'react-router-dom';
 
 export default function Menu(){
     return(
@@ -12,7 +13,7 @@ export default function Menu(){
                     color : '#555'
                 }} />
             </MenuItem>
-            <MenuItem titre={'Catalogue'} hash = {'/catalogue'}>
+            <MenuItem titre={'Catalogue'} hash = {'/catelogue'}>
                 <MingcuteBuilding1Fill style = {{
                         height : 24,
                         width : 24,
@@ -26,7 +27,7 @@ export default function Menu(){
                         color : '#555'
                 }} />
             </MenuItem>
-            <MenuItem titre = {'Formation'} hash = {'/cours'} notice>
+            <MenuItem titre = {'Formation'} hash = {'/formation'} notice>
                 <IonMdBookmarks style = {{
                         height : 24,
                         width : 24,
@@ -45,7 +46,7 @@ export default function Menu(){
 }
 
 
-function MenuItem({children, titre, hash, notice, newNotice}){
+function MenuItem({children, titre, hash = '/', notice, newNotice}){
     const [pathCheck, setPathCheck] = useState(false)
 
     useEffect(() => {
@@ -61,7 +62,7 @@ function MenuItem({children, titre, hash, notice, newNotice}){
     const validation = pathCheck ? '' : 'inactive'
 
     return(
-        <a href={hash} className="menuItem">
+        <Link to={hash} className="menuItem">
             <span className={`${validation}`}></span>
             <div className="icons">
                 {children}
@@ -75,6 +76,6 @@ function MenuItem({children, titre, hash, notice, newNotice}){
                 <div className="indice">+9</div>
             </div>) : null
             }
-        </a>
+        </Link>
     )
 }

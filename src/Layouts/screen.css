@@ -12,3 +12,7 @@
     height: 100%;
     margin: 0 auto;
 }
+
+.item-2-place {
+    grid-column: 2 / 3;
+}
