@@ -166,3 +166,16 @@
     padding-top: 12px ;
 }
 
+.autre_personnel {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+.autre_personnel > div {
+    flex: 1;
+}
+
+.autre + .autre {
+    padding-top: 12px ;
+    border-top: 1px solid silver;
+}

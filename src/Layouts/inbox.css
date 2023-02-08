@@ -1,17 +1,22 @@
 .conversation_field {
     display: block;
+    flex-direction: column;
     width: 100%;
-    height: 100vh;
-    border: 1px solid red;
+    height: var(--screen-height);
+    border: 1px solid transparent;
 }
 
 .conversation_field .header {
     display: flex;
+    padding: 0 12px;
     align-items: center;
     gap : 12px ;
-    height: 100px;
+    height: 65px;
+    margin-top: 5px;
+    border-radius: 12px;
     background-color: white;
     backdrop-filter: blur(5px);
+    border: 1px solid transparent;
 }
 .conversation_field .inputType {
     display: flex;
@@ -27,20 +32,32 @@
 .conversation_field .conversation {
     display: block;
     width: 100%;
-    height: calc(100vh - 172px);
-    border: 1px solid silver;
+    height: calc(100vh - 210px);
 }
 .conversation_field .inputType {
     display: flex;
     width: 100%;
-    height: 72px;
-    border: 1px solid silver;
+    height: 70px;
 }
 .conversation_field .inputType input {
-   height: 48px;
+   height: 42px;
    flex : 1;
    padding: 0 16px ;
    display: flex;
    align-items: center;
-   
+   border-radius: 50px;
+   border: 1px solid var(--primary-color);
+   outline: 1px solid var(--primary-color)
+}
+.conversation_field .inputType .icons {
+   height: 42px;
+   aspect-ratio: 1/1;
+   border-radius: 50%;
+   background-color: var(--primary-color);
+   color: white;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 24px;
 }

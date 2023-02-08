@@ -34,6 +34,33 @@ export default function Profils_Page(){
                         <Champ titre={'Adresse E-mail'} value = {'christineatsihimay74@gmail.com'} />
                     </div>
                 </Basic_Form>
+                <div className="autre_personnel">
+                    <div>
+                    <Composants_Header>
+                        <span>Langues</span>
+                    </Composants_Header>
+                    <Basic_Form style={{ height : 200, padding : 24}}>
+                        <div className='liste'>
+                            <Autre  value={'Français'}/>
+                            <Autre  value={'Anglais'}/>
+                            <Autre  value={'Lingala'}/>
+                        </div>
+                    </Basic_Form>
+                    </div>
+                    <div>
+                    <Composants_Header>
+                        <span>Centres D'intérêts</span>
+                    </Composants_Header>
+                    <Basic_Form style={{ height : 200, padding : 24 }}>
+                        <div className='liste'>
+                            <Autre  value={'Lecture'}/>
+                            <Autre  value={'Developpement personnel'}/>
+                            <Autre  value={'Haute couture'}/>
+                            <Autre  value={'Voyage'}/>
+                        </div>
+                    </Basic_Form>
+                    </div>
+                </div>
                 <Composants_Header>
                     <span>Formations Professionnelles</span>
                 </Composants_Header>
@@ -65,6 +92,13 @@ function Champ({titre, value}){
     return(
         <div className="champ">
             <div className="titre_champ">{titre} </div>
+            <div className="Valeur_champ">{value} </div>
+        </div>
+    )
+}
+function Autre({value}){
+    return(
+        <div className="champ autre">
             <div className="Valeur_champ">{value} </div>
         </div>
     )

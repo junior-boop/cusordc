@@ -49,6 +49,10 @@
    aspect-ratio: 1/1;
    border: 1px solid silver;
    border-radius: 12px ;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
 }
 .input_image .content > .input_image_card .controle{
    width: 400px;

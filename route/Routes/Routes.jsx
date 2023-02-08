@@ -11,7 +11,7 @@ export default function AppRoute(){
     return(
         <Routes >
             <Route path='/' element = {<Accueil />}/>
-            <Route path='/carriere' element = {<Carriere />}/>
+            <Route path='/service' element = {<Carriere />}/>
             <Route path='/formation' element = {<Cours/>}/>
             <Route path='/messagerie' element = {<Messagerie/>}/>
             <Route path='/user' element = {<Profils_Page />}  />

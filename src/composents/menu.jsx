@@ -13,20 +13,14 @@ export default function Menu(){
                     color : '#555'
                 }} />
             </MenuItem>
-            <MenuItem titre={'Catalogue'} hash = {'/catelogue'}>
+            <MenuItem titre={'Services offerts'} hash = {'/service'}>
                 <MingcuteBuilding1Fill style = {{
                         height : 24,
                         width : 24,
                         color : '#555'
                 }} />
             </MenuItem>
-            <MenuItem titre={'Carrière'} hash = {'/carriere'}>
-                <IonBriefcaseSharp style = {{
-                        height : 20,
-                        width : 20,
-                        color : '#555'
-                }} />
-            </MenuItem>
+            
             <MenuItem titre = {'Formation'} hash = {'/formation'} notice>
                 <IonMdBookmarks style = {{
                         height : 24,

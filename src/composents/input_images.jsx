@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from 'react'
 import { IonClose } from './Icons'
 import './input_image.css'
 
-
 export default function Input_image({onClick, visible}){
 
     const [nameValue, setNameValue] = useState('Aucune image telecharger pour le moment')
+    const [base64, setBase64] = useState('')
 
     const isVisible = visible ? 'novisible' : ''
     const inputValue = useRef()
@@ -13,20 +13,37 @@ export default function Input_image({onClick, visible}){
     useEffect(() => {
        if(typeof window !== 'undefined'){
             if(inputValue.current !== undefined){
-                // console.dir(inputValue.current)
+                console.log(base64)
             }
        }
-    }, [inputValue])
+    }, [inputValue, base64])
+
+    
 
     const handleInputChange = ({target}) => {
         setNameValue(target.files[0].name)
+
+        if(!target.files || !target.files[0]) return;
+
+
+        const FilesReader = new FileReader();
+        FilesReader.readAsDataURL(target.files[0])
+
+        FilesReader.addEventListener('load', (e) => {
+           setBase64(e.target.result)
+        })
+
     }
+
+    
 
     return(
         <div className={`input_image ${isVisible}`}>
             <div className="content">
                 <div className="input_image_card">
-                    <div className="affiche"></div>
+                    <div className="affiche" style={{
+                        backgroundImage : base64 !== '' ? `url(${base64})` : null
+                    }}></div>
                     <div className="controle">
                         <div className="input_name">
                             {nameValue}

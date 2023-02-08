@@ -32,9 +32,8 @@ function InputType(){
                 <IonMdMore />
             </div>
             <input type="text" />
-            <Touchable>
-                <IonMdSend />
-            </Touchable>
+            <div className="icons"><IonMdSend /></div>
+                
         </div>
     )
 }
