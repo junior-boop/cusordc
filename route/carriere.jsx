@@ -8,6 +8,7 @@ import Basic_Form from "../src/composents/form";
 import { Composants_Header } from "../src/Layouts/Header";
 import Footer from "../src/composents/footer";
 import Navbar from "../src/Layouts/navbar";
+import { Link } from "react-router-dom";
 
 
 export default function Carriere(){
@@ -17,7 +18,7 @@ export default function Carriere(){
                 <Navbar/>
                 <div className="item-2-place">
                     <Content>
-                        <Header image={'pagne.jpeg'} titre={'Christy Wax Shop'} auteur={'Christine Atsihimey'}/>
+                        <Header image={'./pagne.jpeg'} titre={'Christy Wax Shop'} auteur={'Christine Atsihimey'}/>
                         <div className="infos">
                             <Infos_service>
                                 <Titre_Paragraph>Contacts</Titre_Paragraph>
@@ -39,22 +40,9 @@ export default function Carriere(){
                                 <StarLevel />
                             </Infos_service>
                         </div>
-                        <Basic_Form>
-                            <Composants_Header>
-                                Description du Service
-                            </Composants_Header>
-                            <Paragraph className = 'desc'>
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptate eveniet beatae consequatur. Earum facilis velit repellendus et id odio reiciendis mollitia incidunt quasi, esse fugiat animi aspernatur minus nisi. Rem dignissimos adipisci velit, facilis dolorem debitis minus impedit praesentium reiciendis maxime odit eveniet suscipit omnis aperiam perferendis nemo! Id iusto perferendis quisquam placeat consequuntur at esse numquam obcaecati eligendi vel, beatae, quidem saepe, facere culpa vitae! Doloribus hic quo consequuntur impedit officiis cupiditate qui aliquam quam optio. Earum molestias velit, officiis dolore magnam obcaecati laudantium id atque ratione assumenda sed? Adipisci assumenda optio labore a earum aut ipsam natus aperiam voluptate consectetur unde quis libero consequatur dolores eius quas sed ut velit distinctio reprehenderit porro similique, nam exercitationem. Exercitationem vero praesentium consequuntur dolores corporis?
-                            </Paragraph>
-                        </Basic_Form>
-                        <Basic_Form>
-                            <Composants_Header>
-                                Description du Service
-                            </Composants_Header>
-                            <Paragraph className = 'desc'>
-                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptate eveniet beatae consequatur. Earum facilis velit repellendus et id odio reiciendis mollitia incidunt quasi, esse fugiat animi aspernatur minus nisi. Rem dignissimos adipisci velit, facilis dolorem debitis minus impedit praesentium reiciendis maxime odit eveniet suscipit omnis aperiam perferendis nemo! Id iusto perferendis quisquam placeat consequuntur at esse numquam obcaecati eligendi vel, beatae, quidem saepe, facere culpa vitae! Doloribus hic quo consequuntur impedit officiis cupiditate qui aliquam quam optio. Earum molestias velit, officiis dolore magnam obcaecati laudantium id atque ratione assumenda sed? Adipisci assumenda optio labore a earum aut ipsam natus aperiam voluptate consectetur unde quis libero consequatur dolores eius quas sed ut velit distinctio reprehenderit porro similique, nam exercitationem. Exercitationem vero praesentium consequuntur dolores corporis?
-                            </Paragraph>
-                        </Basic_Form>
+                        <Description />
+                        <Services />
+                        <Produits />
                     </Content>
                     <Footer />
                 </div>
@@ -62,6 +50,13 @@ export default function Carriere(){
         </div>
     )
 }
+
+export function Content({children, style, className = ''}){
+    return(
+        <div className={`service_content ${className}`} style ={style} >{children}</div>
+    )
+}
+
 
 export function Header({image, titre, auteur}){
     return(
@@ -74,13 +69,13 @@ export function Header({image, titre, auteur}){
                         Par {auteur}
                     </Paragraph>
                 </div>
-                <div className="icon">
+                <Link to = {'/'} className="icon">
                     <IonEdit style = {{
                         width : 20,
                         height : 20,
                         color : 'var(--primary-color)'
                     }} />
-                </div>
+                </Link>
             </div>
         </div>
     )
@@ -90,6 +85,62 @@ export function Infos_service({children}){
     return(
         <div className="infos_service">
             {children}
+        </div>
+    )
+}
+
+export function Description(){
+    return(
+        <div className="calque">
+            <Basic_Form>
+                <Composants_Header>
+                    Description du Service
+                </Composants_Header>
+                <Paragraph className = 'desc'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptate eveniet beatae consequatur. Earum facilis velit repellendus et id odio reiciendis mollitia incidunt quasi, esse fugiat animi aspernatur minus nisi. Rem dignissimos adipisci velit, facilis dolorem debitis minus impedit praesentium reiciendis maxime odit eveniet suscipit omnis aperiam perferendis nemo! Id iusto perferendis quisquam placeat consequuntur at esse numquam obcaecati eligendi vel, beatae, quidem saepe, facere culpa vitae! Doloribus hic quo consequuntur impedit officiis cupiditate qui aliquam quam optio. Earum molestias velit, officiis dolore magnam obcaecati laudantium id atque ratione assumenda sed? Adipisci assumenda optio labore a earum aut ipsam natus aperiam voluptate consectetur unde quis libero consequatur dolores eius quas sed ut velit distinctio reprehenderit porro similique, nam exercitationem. Exercitationem vero praesentium consequuntur dolores corporis?
+                </Paragraph>
+            </Basic_Form>
+            <Over_Icon url="/service/edit#description" />
+        </div>
+    )
+}
+
+export function Services(){
+    return(
+        <div className="calque" style={{marginTop : 24}}>
+            <Basic_Form>
+                <Composants_Header>
+                    Quelques Services
+                </Composants_Header>
+                <div style={{padding : '0 24px 12px'}}>
+                    <Service image={'./Food-Distribution-Companies.jpg'} titre={'food distribution'} texte={'je veux voire le rendu, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam sunt cupiditate ipsam officiis nemo. Dicta magni consequatur mollitia enim nulla dolores? Consequatur, praesentium quis!'} />
+                    <Service image={'./Food-Distribution-Companies.jpg'} titre={'food distribution'} texte={'je veux voire le rendu, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam sunt cupiditate ipsam officiis nemo. Dicta magni consequatur mollitia enim nulla dolores? Consequatur, praesentium quis!'} />
+                </div>
+            </Basic_Form>
+            <Over_Icon />
+        </div>
+    )
+}
+
+
+
+export function Produits(){
+    return(
+        <div className="calque" style={{marginTop : 24}}>
+             <Basic_Form>
+                <Composants_Header>
+                    Quelques Produits
+                </Composants_Header>
+                <div className="produits" style={{padding : '0 24px 24px'}}>
+                    <Produit_Items image={'./pagne.jpeg'} name={'Pagne'} price={1234} />
+                    <Produit_Items image={'./pagne.jpeg'} name={'Pagne'} price={1234} />
+                    <Produit_Items image={'./pagne.jpeg'} name={'Pagne'} price={1234} />
+                    <Produit_Items image={'./pagne.jpeg'} name={'Pagne'} price={1234} />
+                    <Produit_Items image={'./pagne.jpeg'} name={'Pagne'} price={1234} />
+                    <Produit_Items image={'./pagne.jpeg'} name={'Pagne'} price={1234} />
+                </div>
+            </Basic_Form>
+            <Over_Icon />
         </div>
     )
 }
@@ -106,8 +157,44 @@ export function StarLevel(){
     )
 }
 
-export function Content({children, style, className = ''}){
+
+
+export function Service({titre, texte, image}){
     return(
-        <div className={`service_content ${className}`} style ={style} >{children}</div>
+        <div className="service">
+            <div className="titre">
+                <Titre_Paragraph>
+                    {titre}
+                </Titre_Paragraph>
+                <Paragraph>{texte}</Paragraph>
+            </div>
+            <div className="image" style={{backgroundImage : `url(${image})`}} />
+        </div>
+    )
+}
+
+export function Produit_Items({image, name, price}){
+    return(
+        <div className="produit_item">
+            <div className="image" style={{backgroundImage : `url(${image})`}}></div>
+            <div className="desc">
+                <div className="desc-text">{name}</div>
+                <div className="price">Prix : $ {price} </div>
+            </div>
+        </div>
+    )
+}
+
+export function Over_Icon({url = "/"}){
+    return(
+        <Link to={url} className="over">
+            <div className="icon">
+                <IonEdit style = {{
+                    width : 20,
+                    height : 20,
+                    color : 'white'
+                }} />
+            </div>
+        </Link>
     )
 }
