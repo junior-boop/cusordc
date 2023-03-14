@@ -10,16 +10,15 @@ export default function Carrossel ({children}){
     const left = useRef()
     const right = useRef()
     const carossel = useRef()
-
-    console.log(children)
     
 
     useEffect(() => {
-        if(typeof window !== 'undefined'){
-            setEnd(ref.current.offsetWidth)
-            setCarosselWidth(carossel.current.offsetWidth)
-        }
-    }, [ref, carossel, end, carosselWidth ])
+
+        setEnd(ref.current.offsetWidth)
+        setCarosselWidth(carossel.current.offsetWidth)
+        console.log(ref.current.offsetWidth)
+        
+    }, [carossel, end, carosselWidth])
 
    
     useEffect(() => {

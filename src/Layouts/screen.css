@@ -15,4 +15,5 @@
 
 .item-2-place {
     grid-column: 2 / 4;
+    position: relative;
 }

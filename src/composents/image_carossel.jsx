@@ -10,12 +10,8 @@ export default function Image_carossel_single({image}){
         </div>
     )
 }
-export function Image_carossel({image}){
-    console.log(image)
-   
+export function Image_carossel({image}){   
     return(
-        <div className="image_element" style={{backgroundImage : `url(${image})`}} data-number = "multiple">
-
-        </div>
+        <div className="image_element" style={{backgroundImage : `url(${image})`}} data-number = "multiple"></div>
     )
 }

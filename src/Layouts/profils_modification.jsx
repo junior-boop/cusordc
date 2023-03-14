@@ -88,23 +88,32 @@ export default function Profils_Modification_Page(){
 }
 
 
-function Champ({titre, type = 'text', value, onChange}){
+export function Champ({titre, type = 'text', value, onChange, styleInput, style}){
     const textarea = useRef()    
+    
+
+    useEffect(() => {
+        if(typeof window !== 'undefined'){
+            if(textarea.current !== undefined){
+               textarea.current.style.height = textarea.current.scrollHeight
+            }
+        }
+    }, [textarea])
 
     return(
-        <div className="champ">
+        <div className="champ" style={style}>
             <div className="titre_champ">{titre}</div>
             {
                 type === 'tel' 
                 ? (
                     <div className='tel_champ'>
                         <div>+243</div>
-                        <input type= {type}  className='value_champ_input' value={value} onChange={onChange} />
+                        <input style={styleInput} type= {type}  className='value_champ_input' value={value} onChange={onChange} />
                     </div>
                 )
                 : type === 'textarea' 
-                ? <textarea  className='value_champ_input' ref={textarea} value={value} onChange={onChange} />
-                : <input type= {type}  className='value_champ_input' value={value} onChange={onChange} />
+                ? <textarea style={styleInput} ref = {textarea} className='value_champ_input' value={value} onChange={onChange} />
+                : <input style={styleInput}  type= {type}  className='value_champ_input' value={value} onChange={onChange} />
             }
         </div>
     )

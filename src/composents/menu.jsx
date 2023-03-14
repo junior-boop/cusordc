@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
 export default function Menu(){
     return(
         <div className="menu">
-            <MenuItem titre={'Accueil'} hash = {'/'}>
+            <MenuItem titre={'Accueil'} hash = {'/'} link = {'/'} >
                 <IonHomeSharp style = {{
                     height : 20,
                     width : 20,
                     color : '#555'
                 }} />
             </MenuItem>
-            <MenuItem titre={'Services offerts'} hash = {'/service'}>
+            <MenuItem titre={'Services offerts'} hash = {'/service?general'} link = {'/service'} >
                 <MingcuteBuilding1Fill style = {{
                         height : 24,
                         width : 24,
@@ -21,14 +21,14 @@ export default function Menu(){
                 }} />
             </MenuItem>
             
-            <MenuItem titre = {'Formation'} hash = {'/formation'} notice>
+            <MenuItem titre = {'Formation'} hash = {'/formation'} notice link = {'/formation'}>
                 <IonMdBookmarks style = {{
                         height : 24,
                         width : 24,
                         color : '#555'
                 }} />
             </MenuItem>
-            <MenuItem titre={'Messagerie'} hash = {'/messagerie'} notice>
+            <MenuItem titre={'Messagerie'} hash = {'/messagerie'} notice link = {'/messagerie'}>
                 <IonMdChatbubbles style = {{
                         height : 24,
                         width : 24,
@@ -40,12 +40,12 @@ export default function Menu(){
 }
 
 
-function MenuItem({children, titre, hash = '/', notice, newNotice}){
+function MenuItem({children, titre, hash = '/', notice, link}){
     const [pathCheck, setPathCheck] = useState(false)
 
     useEffect(() => {
         if(typeof window !== 'undefined'){
-            if( hash === window.location.pathname){
+            if( link === window.location.pathname){
                 setPathCheck(true)
             }
         }

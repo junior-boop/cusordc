@@ -69,7 +69,7 @@ export function Header({image, titre, auteur}){
                         Par {auteur}
                     </Paragraph>
                 </div>
-                <Link to = {'/'} className="icon">
+                <Link to = {'/service_edit'}  className="icon">
                     <IonEdit style = {{
                         width : 20,
                         height : 20,
@@ -100,7 +100,7 @@ export function Description(){
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptate eveniet beatae consequatur. Earum facilis velit repellendus et id odio reiciendis mollitia incidunt quasi, esse fugiat animi aspernatur minus nisi. Rem dignissimos adipisci velit, facilis dolorem debitis minus impedit praesentium reiciendis maxime odit eveniet suscipit omnis aperiam perferendis nemo! Id iusto perferendis quisquam placeat consequuntur at esse numquam obcaecati eligendi vel, beatae, quidem saepe, facere culpa vitae! Doloribus hic quo consequuntur impedit officiis cupiditate qui aliquam quam optio. Earum molestias velit, officiis dolore magnam obcaecati laudantium id atque ratione assumenda sed? Adipisci assumenda optio labore a earum aut ipsam natus aperiam voluptate consectetur unde quis libero consequatur dolores eius quas sed ut velit distinctio reprehenderit porro similique, nam exercitationem. Exercitationem vero praesentium consequuntur dolores corporis?
                 </Paragraph>
             </Basic_Form>
-            <Over_Icon url="/service/edit#description" />
+            <Over_Icon url="/service_edit#description" />
         </div>
     )
 }

@@ -23,8 +23,8 @@ export default function MainThread(){
                 <Publication type={'image'} data = { data.assets} />
                 <Publication type={'annonce'} />
                 <Publication type={'image'} data = { data_2.assets} />
-                <Publication type={'carossel'} />
-                <Publication type={'carossel'} />
+                {/* <Publication type={'carossel'} />
+                <Publication type={'carossel'} /> */}
                 <Composants></Composants>
             </section>
 
